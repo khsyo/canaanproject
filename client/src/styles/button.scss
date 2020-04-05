@@ -6,11 +6,12 @@
     padding: 0.5rem 1.5rem;
     display: inline-block;
     position: relative;
-    transition: all 0.2s;
+    transition: all 0.1s;
 
     font-size: 16px;
     border-radius: 5px;
 
+    border: 1px solid grey;
     cursor: pointer;
   }
 
@@ -27,20 +28,7 @@
   &:active,
   &:focus {
     outline: none;
-    transform: translateY(0.1rem);
+    transform: translateY(0);
     box-shadow: 0 0.2rem 0.3rem rgba(black, 0.3);
-  }
-
-  &::after {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    border-radius: 10rem;
-    transition: all 0.4s;
   }
 }
