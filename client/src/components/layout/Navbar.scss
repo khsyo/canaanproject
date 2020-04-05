@@ -1,0 +1,38 @@
+/* Navbar */
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0.75rem 1rem;
+  top: 0;
+  width: 100%;
+
+  font-weight: 1000;
+
+  background-color: var(--primary-bg-color);
+  opacity: 0.7;
+
+  @media only screen and (max-width: 480px) {
+    flex-direction: column;
+  }
+
+  &__brand {
+    font-weight: bold;
+  }
+
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  a {
+    color: #fff;
+    padding: 0 0.45rem;
+    margin: 0 0.25rem;
+    text-decoration: none;
+    font-weight: 600;
+  }
+}
