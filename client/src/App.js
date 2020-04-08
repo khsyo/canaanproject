@@ -12,6 +12,7 @@ import { loadUser } from "./actions/auth";
 // Component
 import Navbar from "./components/layout/Navbar";
 import Landing from "./components/layout/Landing";
+import Register from "./components/auth/Register";
 
 import "./styles/App.scss";
 
@@ -29,9 +30,12 @@ const App = () => {
       <Router>
         <Fragment>
           <Navbar />
-          <Switch>
-            <Route exact path="/" component={Landing} />
-          </Switch>
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Landing} />
+              <Route exact path="/register" component={Register} />
+            </Switch>
+          </div>
         </Fragment>
       </Router>
     </Provider>
