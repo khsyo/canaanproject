@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Landing = () => {
   return (
@@ -13,7 +14,9 @@ const Landing = () => {
         </h4>
       </div>
       <div className="homepage__cta-box u-center-text">
-        <button className="btn">註冊</button>{" "}
+        <button className="btn">
+          <Link to="/register">註冊</Link>
+        </button>{" "}
         <button className="btn btn-general">登入</button>
       </div>
     </div>

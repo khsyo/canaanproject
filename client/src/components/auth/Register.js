@@ -50,7 +50,7 @@ const Register = ({ register, setAlert, isAuthenticated }) => {
             required
           />
         </div>
-        <div className="form-group">
+        <div className="register__form form-group">
           <input
             type="email"
             placeholder="電子信箱"
@@ -80,7 +80,7 @@ const Register = ({ register, setAlert, isAuthenticated }) => {
             required
           />
         </div>
-        <input type="submit" className="btn" value="立即註冊" />
+        <input type="submit" className="btn register__btn" value="立即註冊" />
       </form>
     </Fragment>
   );

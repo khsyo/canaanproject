@@ -3,16 +3,19 @@
   &:link,
   &:visited {
     text-decoration: none;
-    padding: 0.5rem 1.5rem;
+    padding: 1rem 2rem;
     display: inline-block;
     position: relative;
     transition: all 0.1s;
 
-    font-size: 16px;
+    font-size: 1.5rem;
     border-radius: 5px;
 
     border: 1px solid grey;
     cursor: pointer;
+
+    background-color: $primary-bg-color;
+    color: white;
   }
 
   &:hover {
@@ -30,5 +33,10 @@
     outline: none;
     transform: translateY(0);
     box-shadow: 0 0.2rem 0.3rem rgba(black, 0.3);
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
   }
 }

@@ -13,8 +13,8 @@
 
   font-weight: 1000;
 
-  background-color: var(--primary-bg-color);
-  opacity: 0.9;
+  background-color: $primary-bg-color;
+  opacity: 1;
 
   @media only screen and (max-width: 600px) {
     flex-direction: column;

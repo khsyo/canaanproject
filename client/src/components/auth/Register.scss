@@ -1,0 +1,33 @@
+.register {
+  &__title {
+    color: $primary-font-color;
+  }
+
+  &__secondary-title {
+    color: $secondary-font-color;
+    margin: 0.5rem 0;
+  }
+
+  &__form {
+    .form-group {
+      input {
+        width: 80%;
+        height: 3rem;
+        margin: 0.5rem 0;
+        border: 1px solid #d3d3d3;
+
+        font-size: 1.6rem;
+        padding: 2px 5px;
+
+        &::placeholder {
+          color: #696969;
+          padding: 2px 5px;
+          font-size: 1.5rem;
+        }
+      }
+    }
+  }
+  &__btn {
+    width: 150px;
+  }
+}

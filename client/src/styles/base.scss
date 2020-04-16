@@ -1,8 +1,8 @@
 /* Global styles */
-:root {
-  --primary-font-color: #333;
-  --primary-bg-color: #005d93;
-}
+
+$primary-font-color: #333;
+$secondary-font-color: #a9a9a9;
+$primary-bg-color: #005d93;
 
 * {
   box-sizing: border-box;
@@ -10,20 +10,31 @@
   padding: 0;
 }
 
+html,
+body {
+  // prevent background-image from overflow when in smaller screen
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
   font-family: "Noto Sans TC", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體",
     sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.6rem;
   line-height: 1.4;
-  color: var(--primary-font-color);
-
-  min-height: 100vh;
+  color: $primary-font-color;
 }
 
 .container {
-  margin-top: 3.2rem;
+  margin-top: 6rem;
   position: relative;
+  padding: 0 3rem;
+  min-height: 90vh;
+
   @media only screen and (max-width: 600px) {
-    margin-top: 4.6rem;
+    margin-top: 8rem;
   }
 }
