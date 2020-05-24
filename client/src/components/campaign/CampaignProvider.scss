@@ -1,0 +1,14 @@
+.employer-wrapper {
+  background-color: $primary-campaign-color;
+
+  min-width: 800px;
+  width: 80%;
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 3rem 1.5rem;
+  border-radius: 15px;
+  margin: 0 auto;
+
+  color: white;
+}

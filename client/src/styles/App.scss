@@ -2,7 +2,15 @@
 @import "./button.scss";
 @import "./utilities.scss";
 
+// General
 @import "../components/layout/Navbar.scss";
 @import "../components/layout/Landing.scss";
 
+// Auth
 @import "../components/auth/Register.scss";
+@import "../components/auth/Login.scss";
+
+// Campaign page
+@import "../components/campaign/CampaignProvider.scss";
+@import "../components/campaign/CampaignDescription.scss";
+@import "../components/campaign/CampaignSteps.scss";

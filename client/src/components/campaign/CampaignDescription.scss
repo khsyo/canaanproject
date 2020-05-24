@@ -1,0 +1,47 @@
+.description {
+  &__wrapper {
+    padding: 5rem 3rem;
+    text-align: center;
+  }
+
+  &__title {
+    font-weight: 900;
+    margin-bottom: 2rem;
+    line-height: 3rem;
+    font-weight: 700;
+  }
+
+  &__paragraph {
+    span::after {
+      content: "\a";
+      white-space: pre;
+    }
+  }
+
+  &__deadline {
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+
+    color: $primary-campaign-color;
+
+    .left {
+      border-right: 1px solid #dedede;
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      padding: 1rem 3rem;
+
+      h3 {
+        font-size: 3.5rem;
+      }
+    }
+    .right {
+      padding: 1rem 3rem;
+      border-top: 1px solid #dedede;
+      border-bottom: 1px solid #dedede;
+      h3 {
+        font-size: 3.5rem;
+      }
+    }
+  }
+}

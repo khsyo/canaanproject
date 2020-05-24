@@ -3,7 +3,9 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-const Navbar = (isAuthenticated) => {
+import { logout } from "../../actions/auth";
+
+const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   // Revisit when setup auth capability
   // const authLinksCompany = (
   //   <ul>
@@ -34,7 +36,9 @@ const Navbar = (isAuthenticated) => {
         <Link to="/#!">個人資料</Link>
       </li>
       <li>
-        <Link to="/#!">登出</Link>
+        <a onClick={logout} href="#!">
+          <i className="fas fa-sign-out-alt"></i> <span>登出</span>
+        </a>
       </li>
     </ul>
   );
@@ -48,7 +52,7 @@ const Navbar = (isAuthenticated) => {
         <Link to="/register">註冊</Link>
       </li>
       <li>
-        <Link to="/#!">登入</Link>
+        <Link to="/login">登入</Link>
       </li>
     </ul>
   );
@@ -58,17 +62,21 @@ const Navbar = (isAuthenticated) => {
       <h1 className="navbar__brand">
         <Link to="/">CanaanProject</Link>
       </h1>
-      <Fragment>{isAuthenticated ? authLinksTalent : guestLinks}</Fragment>
+
+      {!loading && (
+        <Fragment>{isAuthenticated ? authLinksTalent : guestLinks}</Fragment>
+      )}
     </nav>
   );
 };
 
 Navbar.propTypes = {
-  isAuthenticated: PropTypes.bool.isRequired,
+  auth: PropTypes.object.isRequired,
+  logout: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = (state) => ({
-  isAuthenticated: state.auth.isAuthenticated,
+  auth: state.auth,
 });
 
-export default connect(mapStateToProps, {})(Navbar);
+export default connect(mapStateToProps, { logout })(Navbar);
