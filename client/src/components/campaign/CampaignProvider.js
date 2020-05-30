@@ -10,7 +10,6 @@ export const CampaignProvider = ({
   useEffect(() => {
     getEmployers();
   }, [getEmployers]);
-
   return (
     <Fragment>
       {loading ? (
@@ -19,8 +18,8 @@ export const CampaignProvider = ({
         <Fragment>
           <div className="employer-wrapper">
             {employer.length > 0 ? (
-              employer.map((emp) => (
-                <div>
+              employer.map((emp, index) => (
+                <div key={index}>
                   <h3>{emp.name}</h3>
                 </div>
               ))

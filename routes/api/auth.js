@@ -6,7 +6,7 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 
-const User = require("../../models/User");
+const EmployerUser = require("../../models/EmployerUser");
 
 // @route  GET api/auth
 // @desc   Get user profile
@@ -15,7 +15,7 @@ const User = require("../../models/User");
 router.get("/", auth, async (req, res) => {
   try {
     // select method will exclude the password
-    const user = await User.findById(req.user.id).select("-password");
+    const user = await EmployerUser.findById(req.user.id).select("-password");
     res.json(user);
   } catch (err) {
     console.error(err.message);
@@ -44,7 +44,7 @@ router.post(
 
     try {
       // See if user exists
-      let user = await User.findOne({
+      let user = await EmployerUser.findOne({
         email: email,
       });
 
@@ -96,7 +96,7 @@ router.post(
       );
     } catch (err) {
       console.log(err.message);
-      res.status(500).send("Server error");
+      res.status(500).send("Server error!");
     }
   }
 );

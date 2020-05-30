@@ -6,22 +6,20 @@ const jwt = require("jsonwebtoken");
 const config = require("config");
 const { check, validationResult } = require("express-validator");
 
-const User = require("../../models/User");
+const EmployerUser = require("../../models/EmployerUser");
 
-// @route  POST api/users
-// @desc   Register user
+// @route  POST api/employerUser
+// @desc   Register employer user
 // @access Private
 router.post(
   "/",
   [
-    check("name", "Name is required")
-      .not()
-      .isEmpty(),
+    check("name", "Name is required").not().isEmpty(),
     check("email", "Please include a valid email").isEmail(),
     check(
       "password",
       "Please enter a password with 6 or more characters"
-    ).isLength({ min: 6 })
+    ).isLength({ min: 6 }),
   ],
   async (req, res) => {
     const errors = validationResult(req);
@@ -33,7 +31,7 @@ router.post(
 
     try {
       // See if user exists
-      let user = await User.findOne({ email });
+      let user = await EmployerUser.findOne({ email });
 
       if (user) {
         return res
@@ -44,14 +42,14 @@ router.post(
       const avatar = gravatar.url(email, {
         s: "200",
         r: "pg",
-        d: "mm"
+        d: "mm",
       });
 
-      user = new User({
+      user = new EmployerUser({
         name,
         email,
         password,
-        avatar
+        avatar,
       });
 
       // Encrypt password
@@ -66,8 +64,8 @@ router.post(
 
       const payload = {
         user: {
-          id: user.id
-        }
+          id: user.id,
+        },
       };
 
       jwt.sign(
@@ -85,5 +83,18 @@ router.post(
     }
   }
 );
+
+// @route GET api/employerUser
+// @desc get all employers
+// @access Public
+router.get("/", async (req, res) => {
+  try {
+    const employers = await EmployerUser.find().populate();
+    res.json(employers);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).json("Server error...when getting all jobs");
+  }
+});
 
 module.exports = router;

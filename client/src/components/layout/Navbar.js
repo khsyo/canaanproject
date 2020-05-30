@@ -45,15 +45,13 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
 
   const guestLinks = (
     <ul>
+      {/* <li>找工作</li>
       <li>
-        <Link to="/#!">找工作</Link>
+        <Link to="/register">企業註冊</Link>
       </li>
       <li>
-        <Link to="/register">註冊</Link>
-      </li>
-      <li>
-        <Link to="/login">登入</Link>
-      </li>
+        <Link to="/login">企業登入</Link>
+      </li> */}
     </ul>
   );
 

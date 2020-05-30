@@ -11,3 +11,6 @@ export const GET_PROFILE = "GET_PROFILE";
 export const UPDATE_PROFILE = "UPDATE_PROFILE";
 export const CLEAR_PROFILE = "CLEAR_PROFILE";
 export const GET_EMPLOYERS = "GET_EMPLOYERS";
+export const EMPLOYERS_ERROR = "EMPLOYERS_ERROR";
+export const GET_ALL_JOBS = "GET_ALL_JOBS";
+export const JOBS_ERROR = "JOBS_ERROR";

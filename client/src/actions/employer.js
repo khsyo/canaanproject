@@ -4,7 +4,7 @@ import axios from "axios";
 // get employers
 export const getEmployers = () => async (dispatch) => {
   try {
-    const res = await axios.get("/api/employer");
+    const res = await axios.get("/api/employerUser");
 
     dispatch({
       type: GET_EMPLOYERS,
