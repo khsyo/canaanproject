@@ -8,10 +8,8 @@
   }
   &__employer-container {
     width: 85%;
-    min-height: 300px;
     background-color: #fff;
-    margin-top: 5rem;
-    margin-bottom: 5rem;
+    margin: 5rem auto;
     padding: 1.5rem 1rem;
 
     .employer-info {
@@ -33,25 +31,35 @@
         flex-direction: row;
         justify-content: space-between;
 
+        &:nth-child(even) {
+          margin: 0 0 2rem 0;
+        }
+
         .content {
           text-align: left;
-          flex-basis: 7;
+          flex-basis: 3;
         }
 
         a {
-          flex-basis: 3;
+          flex-basis: 2;
         }
       }
     }
-    @media only screen and (max-width: 990px) {
+  }
+  @media only screen and (max-width: 990px) {
+    &__employer-container {
+      margin: 3rem auto;
+      width: 100%;
+      max-width: 550px;
       .job-container {
         display: flex;
         flex-direction: column;
         flex-wrap: nowrap;
-      }
-      .job-wrapper {
-        width: 100%;
-        text-align: center;
+
+        .job-wrapper {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
   }

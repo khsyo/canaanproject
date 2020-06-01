@@ -42,4 +42,20 @@
       font-size: 1.2rem;
     }
   }
+
+  @media only screen and (max-width: 990px) {
+    &__section {
+      flex-direction: column;
+    }
+
+    &__step {
+      width: 80%;
+      max-width: 300px;
+      margin: 0 auto 5rem;
+
+      p {
+        font-size: 1.5rem;
+      }
+    }
+  }
 }
