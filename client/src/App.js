@@ -15,6 +15,7 @@ import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import CampaignPage from "./components/campaign/CampaignPage";
+import CampaignJob from "./components/campaign/CampaignJob";
 
 import "./styles/App.scss";
 
@@ -42,6 +43,7 @@ const App = () => {
                 path="/2020June-speed-interview"
                 component={CampaignPage}
               />
+              <Route exact path={"/job/:id"} component={CampaignJob} />
             </Switch>
           </div>
         </Fragment>

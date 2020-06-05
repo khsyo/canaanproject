@@ -1,8 +1,9 @@
-import { GET_ALL_JOBS } from "../actions/types";
+import { GET_ALL_JOBS, GET_JOB_BY_ID } from "../actions/types";
 
 const initialState = {
   loading: true,
-  jobs: null,
+  jobs: {},
+  job: null,
 };
 
 export default function (state = initialState, action) {
@@ -13,6 +14,13 @@ export default function (state = initialState, action) {
         ...state,
         loading: false,
         jobs: payload,
+      };
+
+    case GET_JOB_BY_ID:
+      return {
+        ...state,
+        loading: false,
+        job: payload,
       };
 
     default:

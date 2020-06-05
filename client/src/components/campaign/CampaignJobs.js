@@ -1,16 +1,12 @@
 import React, { Fragment, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getAllJobs } from "../../actions/jobs";
 
-const CampaignJobs = ({
-  getAllJobs,
-  job: { loading, jobs },
-  employer: { employer },
-}) => {
+const CampaignJobs = ({ getAllJobs, job: { loading, jobs } }) => {
   useEffect(() => {
     getAllJobs();
   }, [getAllJobs]);
-  console.log(jobs);
   return (
     <Fragment>
       {loading ? (
@@ -38,7 +34,9 @@ const CampaignJobs = ({
                           <h4 className="title">{j.title}</h4>
                           <p className="salary">{j.salary}</p>
                         </div>
-                        <button className="btn cta-btn">應徵</button>
+                        <Link to={`/job/${j._id}`} className="btn cta-btn">
+                          應徵
+                        </Link>
                       </div>
                     ))}
                   </div>

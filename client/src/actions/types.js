@@ -14,3 +14,4 @@ export const GET_EMPLOYERS = "GET_EMPLOYERS";
 export const EMPLOYERS_ERROR = "EMPLOYERS_ERROR";
 export const GET_ALL_JOBS = "GET_ALL_JOBS";
 export const JOBS_ERROR = "JOBS_ERROR";
+export const GET_JOB_BY_ID = "GET_JOB_BY_ID";

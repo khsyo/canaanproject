@@ -1,3 +1,4 @@
+// NOT IN USE
 const mongoose = require("mongoose");
 
 const EmployerSchema = new mongoose.Schema({

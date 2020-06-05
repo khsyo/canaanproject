@@ -38,10 +38,12 @@
         .content {
           text-align: left;
           flex-basis: 3;
+          margin-right: 0.5rem;
         }
 
-        a {
+        .cta-btn {
           flex-basis: 2;
+          align-items: center;
         }
       }
     }
@@ -59,6 +61,20 @@
         .job-wrapper {
           width: 100%;
           text-align: center;
+        }
+      }
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    &__employer-container {
+      .job-container {
+        .job-wrapper {
+          flex-direction: column;
+          .cta-btn {
+            margin-top: 1.5rem;
+            width: 8rem;
+          }
         }
       }
     }

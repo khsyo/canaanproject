@@ -30,6 +30,25 @@ router.get("/", async (req, res) => {
   }
 });
 
+// @route GET api/jobs/:job_id
+// desc get a job by job id
+//access public
+router.get("/:job_id", async (req, res) => {
+  try {
+    const job = await Job.findOne({
+      _id: req.params.job_id,
+    }).populate("employeruser", ["name", "email", "location"]);
+    if (!job) {
+      return res.status(400).json({ msg: "Job not found" });
+    }
+    console.log(req);
+    res.json(job);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server error...when get a job by id");
+  }
+});
+
 // @route POST api/jobs
 // desc post a job
 //access public
@@ -42,27 +61,31 @@ router.post(
     check("title", "Job title is required").not().isEmpty(),
   ],
   async (req, res) => {
-    const errors = validationResult(req);
-    if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+    try {
+      const errors = validationResult(req);
+      if (!errors.isEmpty()) {
+        return res.status(400).json({ errors: errors.array() });
+      }
+      const { salary, type, title, skills, description } = req.body;
+
+      const jobFields = {};
+      jobFields.employeruser = req.user.id;
+      if (salary) jobFields.salary = salary;
+      if (type) jobFields.type = type;
+      if (title) jobFields.title = title;
+      if (skills) {
+        jobFields.skills = skills.split(",").map((skill) => skill.trim());
+      }
+      if (description) jobFields.description = description;
+
+      let job = new Job(jobFields);
+      await job.save();
+
+      return res.json(job);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send("Server error...when creating a job");
     }
-    const { salary, type, title, skills, description } = req.body;
-
-    const jobFields = {};
-    console.log(req.user);
-    jobFields.employeruser = req.user.id;
-    if (salary) jobFields.salary = salary;
-    if (type) jobFields.type = type;
-    if (title) jobFields.title = title;
-    if (skills) {
-      jobFields.skills = skills.split(",").map((skill) => skill.trim());
-    }
-    if (description) jobFields.description = description;
-
-    let job = new Job(jobFields);
-    await job.save();
-
-    return res.json(job);
   }
 );
 
