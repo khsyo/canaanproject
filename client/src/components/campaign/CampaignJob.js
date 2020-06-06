@@ -1,13 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Fragment } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getJobById } from "../../actions/jobs";
+
+import Spinner from "../layout/Spinner";
+import JobEssential from "../job/JobEssential";
 
 export const CampaignJob = ({ getJobById, job: { loading, job }, match }) => {
   useEffect(() => {
     getJobById(match.params.id);
   }, [getJobById, match.params.id]);
-  return <div>JOB</div>;
+  return (
+    <Fragment>
+      {loading ? (
+        <Spinner />
+      ) : (
+        <Fragment>{job ? <JobEssential job={job} /> : "loading"}</Fragment>
+      )}
+    </Fragment>
+  );
 };
 
 CampaignJob.propTypes = {
