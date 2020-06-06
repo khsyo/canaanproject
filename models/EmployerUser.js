@@ -33,6 +33,12 @@ const EmployerUserSchema = new mongoose.Schema({
       type: [String],
     },
   },
+  image: {
+    type: String,
+  },
+  anchor: {
+    type: String,
+  },
 });
 
 module.exports = EmployerUser = mongoose.model(

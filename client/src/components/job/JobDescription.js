@@ -22,7 +22,7 @@ const JobDescription = ({
         <div className="job__basic-description--title">{title}</div>
         <div className="job__basic-description--skills">
           {skills?.map((skill) => (
-            <div className="skill"></div>
+            <div className="skill">{skill}</div>
           ))}
         </div>
       </div>

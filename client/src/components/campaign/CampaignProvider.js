@@ -10,6 +10,10 @@ export const CampaignProvider = ({
   useEffect(() => {
     getEmployers();
   }, [getEmployers]);
+  const styled = {
+    maxHeight: "84px",
+    maxWidth: "112px",
+  };
   return (
     <Fragment>
       {loading ? (
@@ -19,8 +23,8 @@ export const CampaignProvider = ({
           <div className="employer-wrapper">
             {employer.length > 0 ? (
               employer.map((emp, index) => (
-                <div key={index}>
-                  <h3>{emp.name}</h3>
+                <div className="logo" key={index}>
+                  <img style={styled} src={emp.image} alt={emp.name} />
                 </div>
               ))
             ) : (
