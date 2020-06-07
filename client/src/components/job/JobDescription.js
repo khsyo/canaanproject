@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import PropTypes from "prop-types";
 
 const JobDescription = ({
@@ -11,15 +11,20 @@ const JobDescription = ({
   return (
     <div className="job__basic-container">
       <div className="job__header">
-        <h1 className="job__title">{title}</h1>
+        <h2 className="job__title">{title}</h2>
         <span className="job__employer-location">
           {`${name} | ${location}`}
         </span>
       </div>
       <div className="job__basic-description">
-        <div className="job__basic-description--salary">{salary}</div>
-        <div className="job__basic-description--type">{type}</div>
-        <div className="job__basic-description--title">{title}</div>
+        {salary && (
+          <Fragment>
+            <h3>薪資</h3>
+            <div className="job__basic-description--salary">{salary}</div>
+          </Fragment>
+        )}
+        {type && <div className="job__basic-description--type">{type}</div>}
+        {title && <div className="job__basic-description--title">{title}</div>}
         <div className="job__basic-description--skills">
           {skills?.map((skill) => (
             <div className="skill">{skill}</div>

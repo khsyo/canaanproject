@@ -1,0 +1,139 @@
+.blank-box {
+  background-image: linear-gradient(
+    to right,
+    $primary-campaign-color,
+    $primary-campaign-color-light
+  );
+  width: 100%;
+  height: 10rem;
+  z-index: -1;
+}
+
+.job {
+  &__basic-wrapper {
+    transform: translateY(-5rem);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__basic-container {
+    background-color: #fff;
+    max-width: 64rem;
+    width: 48rem;
+    border: 1px #dedede solid;
+    border-radius: 5px;
+    padding: 2rem 3rem;
+    margin-right: 4rem;
+  }
+
+  &__header {
+    border-bottom: 1px #dedede solid;
+    margin-bottom: 2rem;
+
+    .employer-location {
+      color: #a9a9a9;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+    }
+  }
+
+  &__basic-description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .row {
+      margin-bottom: 2rem;
+    }
+
+    h4 {
+      margin-bottom: 0.5rem;
+    }
+    &--salary {
+      color: $primary-campaign-color;
+      font-weight: bold;
+      font-size: 2rem;
+    }
+    &--skills {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 1rem;
+
+      .skill-box {
+        margin-right: 1.2rem;
+        margin-bottom: 1rem;
+        padding: 0.5rem 0.8rem;
+        border-radius: 3px;
+        color: #80859f;
+        background-color: #eef0f2;
+      }
+    }
+  }
+}
+
+.cta__container--right {
+  width: 24rem;
+  height: 12rem;
+  border: 1px #dedede solid;
+  border-radius: 5px;
+  background-color: #eef0f2;
+  padding: 1rem 3rem;
+
+  display: flex;
+  flex-direction: column;
+
+  .cta-btn {
+    margin-bottom: 1.2rem;
+  }
+}
+
+.cta__container--bottom {
+  display: none;
+}
+
+@media only screen and (max-width: 900px) {
+  .job {
+    &__basic-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &__basic-container {
+      margin: 0 auto;
+      width: 95%;
+    }
+  }
+  .cta__container--right {
+    display: none;
+  }
+
+  .cta__container--bottom {
+    border: 1px #dedede solid;
+    border-radius: 5px;
+    background-color: #eef0f2;
+    padding: 1rem 3rem;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    width: 100%;
+    height: 6rem;
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 3rem;
+
+    .cta-btn {
+      margin-right: 2rem;
+      font-size: 1rem;
+      min-width: 8rem;
+    }
+
+    span {
+      font-size: 1rem;
+      overflow: hidden;
+    }
+  }
+}

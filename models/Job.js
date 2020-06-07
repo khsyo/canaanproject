@@ -34,6 +34,15 @@ const JobSchema = new mongoose.Schema({
       },
     },
   ],
+  requiredNumber: {
+    type: String,
+  },
+  workingHours: {
+    type: String,
+  },
+  ctaLink: {
+    type: String,
+  },
 });
 
 module.exports = Job = mongoose.model("job", JobSchema);
