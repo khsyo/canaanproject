@@ -70,7 +70,7 @@ const JobEssential = ({ job }) => {
         </div>
         {ctaLink && (
           <div className="cta__container">
-            <div className="cta__container--right">
+            <div id="right" className="cta__container--right">
               <button className="btn cta-btn">
                 <a href={ctaLink}>應徵</a>
               </button>

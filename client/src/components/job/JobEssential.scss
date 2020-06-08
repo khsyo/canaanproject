@@ -14,17 +14,19 @@
     transform: translateY(-5rem);
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
+    padding-left: 4rem;
   }
 
   &__basic-container {
     background-color: #fff;
-    max-width: 64rem;
-    width: 48rem;
+    max-width: 60rem;
     border: 1px #dedede solid;
     border-radius: 5px;
     padding: 2rem 3rem;
     margin-right: 4rem;
+
+    flex-grow: 2;
   }
 
   &__header {
@@ -73,6 +75,10 @@
   }
 }
 
+#right {
+  margin-right: 2rem;
+}
+
 .cta__container--right {
   width: 24rem;
   height: 12rem;
@@ -98,6 +104,7 @@
     &__basic-wrapper {
       display: flex;
       flex-direction: column;
+      padding: 0;
     }
 
     &__basic-container {

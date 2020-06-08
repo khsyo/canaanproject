@@ -1,0 +1,29 @@
+.job__more-description {
+  &--wrapper {
+    width: 100%;
+  }
+
+  &--container {
+    max-width: 60rem;
+
+    border: 1px #dedede solid;
+    border-radius: 5px;
+    margin-left: 4rem;
+    margin-bottom: 7rem;
+    padding: 2rem 3rem;
+
+    flex-grow: 3;
+  }
+  &--section {
+    margin-bottom: 3rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .job__more-description {
+    &--container {
+      width: 95%;
+      margin: 0 auto 7rem auto;
+    }
+  }
+}
