@@ -1,0 +1,23 @@
+.footer {
+  width: 100%;
+  background-color: $primary-campaign-bg-color;
+  min-height: 20rem;
+  color: $primary-font-color;
+
+  display: flex;
+
+  &__logo {
+    flex-basis: 20rem;
+    flex-grow: 1;
+  }
+
+  &__social {
+    flex-basis: 20rem;
+    flex-grow: 2;
+  }
+
+  &__contact {
+    flex-basis: 20rem;
+    flex-grow: 2;
+  }
+}

@@ -11,6 +11,7 @@ import { loadUser } from "./actions/auth";
 
 // Component
 import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
 // import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
@@ -45,6 +46,7 @@ const App = () => {
               /> */}
               <Route exact path={"/job/:id"} component={CampaignJob} />
             </Switch>
+            <Footer />
           </div>
         </Fragment>
       </Router>

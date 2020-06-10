@@ -58,7 +58,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <nav className="navbar">
       <h1 className="navbar__brand">
-        <Link to="/">CanaanProject</Link>
+        <Link to="/">Canaan Project</Link>
       </h1>
 
       {!loading && (

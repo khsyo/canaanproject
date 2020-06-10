@@ -16,6 +16,12 @@
       display: flex;
       border-bottom: 1px solid #dedede;
       padding-bottom: 2rem;
+      font-size: 1.7rem;
+
+      h3 {
+        margin-left: 3rem;
+        margin-top: 1rem;
+      }
     }
     .job-container {
       padding: 2rem 1rem;
@@ -30,6 +36,15 @@
         display: flex;
         flex-direction: row;
         justify-content: space-between;
+
+        .title {
+          font-size: 1.6rem;
+          margin-bottom: 1rem;
+        }
+
+        .salary {
+          color: $secondary-font-color;
+        }
 
         &:nth-child(even) {
           margin: 0 0 2rem 0;

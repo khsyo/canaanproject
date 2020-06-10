@@ -4,7 +4,7 @@ $primary-font-color: #333;
 $secondary-font-color: #a9a9a9;
 $primary-bg-color: #005d93;
 
-$primary-campaign-color: #2768f6;
+$primary-campaign-color: #eb9605;
 $primary-campaign-color-light: #bed6fc;
 $primary-campaign-bg-color: rgb(223, 228, 233);
 $secondary-campaign-bg-color: rgb(6, 50, 127);
@@ -26,9 +26,10 @@ html {
 }
 
 body {
-  font-family: "Noto Sans TC", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體",
-    sans-serif;
-  font-size: 1.6rem;
+  font-family: LiHei Pro Medium, Microsoft JhengHei, \\65b0\7d30\660e\9ad4,
+    Arial, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
   line-height: 1.4;
   color: $primary-font-color;
 }
