@@ -1,5 +1,5 @@
 import React, { Fragment, useEffect } from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import { getAllJobs } from "../../actions/jobs";
 
@@ -34,9 +34,9 @@ const CampaignJobs = ({ getAllJobs, job: { loading, jobs } }) => {
                           <h4 className="title">{j.title}</h4>
                           <p className="salary">{j.salary}</p>
                         </div>
-                        <Link to={`/job/${j._id}`} className="btn cta-btn">
+                        <a href={`/job/${j._id}`} className="btn cta-btn">
                           應徵
-                        </Link>
+                        </a>
                       </div>
                     ))}
                   </div>

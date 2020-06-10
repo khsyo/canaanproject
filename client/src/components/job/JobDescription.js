@@ -6,7 +6,7 @@ const JobDescription = ({ job }) => {
   return (
     <div className="job__more-description--wrapper">
       <div className="job__more-description--container">
-        {description && (
+        {description ? (
           <Fragment>
             {description.map((d, index) => (
               <div className="job__more-description--section">
@@ -20,7 +20,7 @@ const JobDescription = ({ job }) => {
               </div>
             ))}
           </Fragment>
-        )}
+        ) : null}
       </div>
     </div>
   );

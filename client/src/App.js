@@ -11,7 +11,7 @@ import { loadUser } from "./actions/auth";
 
 // Component
 import Navbar from "./components/layout/Navbar";
-import Landing from "./components/layout/Landing";
+// import Landing from "./components/layout/Landing";
 import Register from "./components/auth/Register";
 import Login from "./components/auth/Login";
 import CampaignPage from "./components/campaign/CampaignPage";
@@ -35,14 +35,14 @@ const App = () => {
           <Navbar />
           <div className="container">
             <Switch>
-              <Route exact path="/" component={Landing} />
+              <Route exact path="/" component={CampaignPage} />
               <Route exact path="/register" component={Register} />
               <Route exact path="/login" component={Login} />
-              <Route
+              {/* <Route
                 exact
                 path="/2020June-speed-interview"
                 component={CampaignPage}
-              />
+              /> */}
               <Route exact path={"/job/:id"} component={CampaignJob} />
             </Switch>
           </div>
