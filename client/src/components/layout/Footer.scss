@@ -1,23 +1,54 @@
 .footer {
   width: 100%;
-  background-color: $primary-campaign-bg-color;
+  background-color: $secondary-bg-color;
   min-height: 20rem;
   color: $primary-font-color;
+  border-top: 1px solid #d3d3d3;
 
   display: flex;
 
   &__logo {
     flex-basis: 20rem;
     flex-grow: 1;
+    padding: 1.2rem 1.2rem;
+
+    position: relative;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__social {
     flex-basis: 20rem;
     flex-grow: 2;
+    padding: 1.2rem 1.2rem;
+
+    &--container {
+      width: 300px;
+      display: flex;
+      justify-content: space-around;
+      position: relative;
+      top: 30%;
+
+      .item {
+        a,
+        a:visited,
+        a:link {
+          text-decoration: none;
+        }
+        i {
+          font-size: 3rem;
+        }
+      }
+    }
   }
 
-  &__contact {
-    flex-basis: 20rem;
-    flex-grow: 2;
-  }
+  // &__contact {
+  //   flex-basis: 20rem;
+  //   flex-grow: 2;
+  // }
 }

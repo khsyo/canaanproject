@@ -9,7 +9,7 @@ const JobDescription = ({ job }) => {
         {description ? (
           <Fragment>
             {description.map((d, index) => (
-              <div className="job__more-description--section">
+              <div key={index} className="job__more-description--section">
                 <h4 className="title">{d.title}</h4>
                 <ul>
                   {d.short_description &&

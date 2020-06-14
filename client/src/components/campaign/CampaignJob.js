@@ -32,7 +32,7 @@ export const CampaignJob = ({ getJobById, job: { loading, job }, match }) => {
 };
 
 CampaignJob.propTypes = {
-  getJobyById: PropTypes.func.isRequired,
+  getJobyById: PropTypes.func,
   job: PropTypes.object.isRequired,
 };
 

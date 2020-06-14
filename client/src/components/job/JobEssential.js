@@ -60,8 +60,10 @@ const JobEssential = ({ job }) => {
               <div className="row">
                 <h4>技能需求</h4>
                 <ul className="job__basic-description--skills">
-                  {skills?.map((skill) => (
-                    <li className="skill-box">{skill}</li>
+                  {skills?.map((skill, index) => (
+                    <li key={index} className="skill-box">
+                      {skill}
+                    </li>
                   ))}
                 </ul>
               </div>
