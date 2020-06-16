@@ -16,14 +16,9 @@ $secondary-campaign-bg-color: rgb(6, 50, 127);
   padding: 0;
 }
 
-html,
-body {
-  // prevent background-image from overflow when in smaller screen
-  overflow-x: hidden;
-}
-
 html {
   font-size: 62.5%;
+  overflow-y: scroll;
 }
 
 body {
@@ -33,10 +28,11 @@ body {
   letter-spacing: 2px;
   line-height: 1.4;
   color: $primary-font-color;
+  position: absolute;
 }
 
 .container {
-  margin-top: 10rem;
+  margin-top: 7rem;
   position: relative;
 
   min-height: 90vh;
