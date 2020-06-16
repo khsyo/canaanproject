@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
+import logo from "./tcp_brand_logo.png";
+
 import { logout } from "../../actions/auth";
 
 const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
@@ -58,7 +60,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   return (
     <nav className="navbar">
       <h1 className="navbar__brand">
-        <Link to="/">Canaan Project</Link>
+        <Link to="/">
+          <img src={logo} alt="The Canaan Project" />
+        </Link>
       </h1>
 
       {!loading && (

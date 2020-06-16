@@ -1,12 +1,12 @@
 import React from "react";
-import logo from "./canaan_project_logo.jpg";
+import logo from "./tcp_footer_logo.png";
 
 const Footer = () => {
-  const logoStyle = { height: "125px", width: "auto" };
+  const logoStyle = { height: "280px", width: "auto" };
   return (
     <div className="footer">
       <div className="footer__logo">
-        <img style={logoStyle} src={logo} alt="website logo" />
+        <img style={logoStyle} src={logo} alt="footer logo" />
       </div>
       <div className="footer__social">
         <div className="footer__social--container">

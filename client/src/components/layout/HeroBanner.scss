@@ -1,0 +1,11 @@
+.hero-banner {
+  background-image: url("./hero-banner.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 700px;
+
+  @media only screen and (max-width: 600px) {
+    background-position: 0 0;
+  }
+}
