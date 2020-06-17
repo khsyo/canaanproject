@@ -39,6 +39,9 @@ const EmployerUserSchema = new mongoose.Schema({
   anchor: {
     type: String,
   },
+  website: {
+    type: String,
+  },
 });
 
 module.exports = EmployerUser = mongoose.model(

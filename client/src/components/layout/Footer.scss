@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
-  background-color: #fff;
-  min-height: 20rem;
+  background-color: #4c4646;
+  min-height: 25rem;
   color: $primary-font-color;
   border-top: 1px solid #d3d3d3;
 
@@ -35,9 +35,10 @@
       top: 30%;
 
       .item {
-        a,
-        a:visited,
-        a:link {
+        color: #eb9605;
+        &,
+        &:visited,
+        &:link {
           text-decoration: none;
         }
         i {
@@ -51,4 +52,32 @@
   //   flex-basis: 20rem;
   //   flex-grow: 2;
   // }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    margin-bottom: 10rem;
+
+    flex-direction: column;
+
+    &__logo {
+      flex-basis: 10rem;
+      flex-grow: 0;
+
+      img {
+        width: 200px;
+      }
+    }
+
+    &__social {
+      position: relative;
+
+      &--container {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+  }
 }

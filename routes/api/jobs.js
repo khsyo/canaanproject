@@ -37,7 +37,13 @@ router.get("/:job_id", async (req, res) => {
   try {
     const job = await Job.findOne({
       _id: req.params.job_id,
-    }).populate("employeruser", ["name", "email", "location"]);
+    }).populate("employeruser", [
+      "name",
+      "email",
+      "location",
+      "image",
+      "website",
+    ]);
     if (!job) {
       return res.status(400).json({ msg: "Job not found" });
     }

@@ -6,6 +6,7 @@ import { getJobById } from "../../actions/jobs";
 import Spinner from "../layout/Spinner";
 import JobEssential from "../job/JobEssential";
 import JobDescription from "../job/JobDescription";
+import JobEmployerBriefIntro from "../job/JobEmployerBriefIntro";
 
 export const CampaignJob = ({ getJobById, job: { loading, job }, match }) => {
   useEffect(() => {
@@ -21,6 +22,7 @@ export const CampaignJob = ({ getJobById, job: { loading, job }, match }) => {
             <div className="job__wrapper">
               <JobEssential job={job} />
               <JobDescription job={job} />
+              <JobEmployerBriefIntro job={job} />
             </div>
           ) : (
             "loading"
