@@ -20,13 +20,13 @@
 
   &__basic-container {
     background-color: #fff;
-    max-width: 60rem;
+    max-width: 70rem;
     border: 1px #dedede solid;
     border-radius: 5px;
     padding: 2rem 3rem;
-    margin-right: 4rem;
+    margin-right: 2rem;
 
-    flex-grow: 2;
+    flex-grow: 1;
   }
 
   &__header {
@@ -80,8 +80,8 @@
 }
 
 .cta__container--right {
-  width: 24rem;
-  height: 12rem;
+  width: 20rem;
+  height: 10rem;
   border: 1px #dedede solid;
   border-radius: 5px;
   background-color: #eef0f2;
@@ -92,6 +92,10 @@
 
   .cta-btn {
     margin-bottom: 1.2rem;
+  }
+
+  span {
+    font-size: 1rem;
   }
 }
 
@@ -111,6 +115,7 @@
     &__basic-container {
       margin: 0 auto;
       width: 95%;
+      padding: 1rem 1.8rem;
     }
   }
   .cta__container--right {
@@ -122,6 +127,7 @@
     border-radius: 5px;
     background-color: #eef0f2;
     padding: 1rem 3rem;
+    margin-top: 3rem;
 
     display: flex;
     flex-direction: row;

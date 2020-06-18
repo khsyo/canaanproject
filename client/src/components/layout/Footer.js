@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./tcp_footer_logo.png";
 
 const Footer = () => {
-  const logoStyle = { height: "280px", width: "auto" };
+  const logoStyle = { height: "120px", width: "auto" };
   return (
     <div className="footer">
       <div className="footer__logo">

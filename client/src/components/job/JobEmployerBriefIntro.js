@@ -1,8 +1,19 @@
 import React, { Fragment } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const JobEmployerBriefIntro = ({ job }) => {
-  const { image, name, location, website } = job.employeruser;
-  console.log(website);
+  const { image, name, location, website, mission } = job.employeruser;
+  const settings = {
+    dots: true,
+    infinite: true,
+    autoplay: true,
+    arrows: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
   return (
     <Fragment>
       {job && (
@@ -16,22 +27,31 @@ const JobEmployerBriefIntro = ({ job }) => {
                 <div className="job-employer-brief-intro__info-wrapper--name">
                   <h3>{name}</h3>
                 </div>
-                {(location || website) && (
-                  <div className="job-employer-brief-intro__info-wrapper--contact">
-                    {location && (
-                      <div className="location">
-                        <i className="fas fa-compass" />
-                        {location}
+                <div className="slick-container">
+                  <Slider {...settings}>
+                    {(location || website) && (
+                      <div className="job-employer-brief-intro__info-wrapper--contact">
+                        {location && (
+                          <div className="location">
+                            <i className="fas fa-compass" />
+                            {location}
+                          </div>
+                        )}
+                        {website && (
+                          <div className="website">
+                            <i className="fas fa-globe" />
+                            {website}
+                          </div>
+                        )}
                       </div>
                     )}
-                    {website && (
-                      <div className="website">
-                        <i className="fas fa-globe" />
-                        {website}
+                    {mission && (
+                      <div className="job-employer-brief-intro__mission-wrapper">
+                        {mission}
                       </div>
                     )}
-                  </div>
-                )}
+                  </Slider>
+                </div>
               </div>
             </div>
           </div>

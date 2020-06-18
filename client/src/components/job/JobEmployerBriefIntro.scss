@@ -5,8 +5,9 @@
 
   &__container {
     display: flex;
+    flex-direction: column;
 
-    max-width: 60rem;
+    max-width: 70rem;
 
     border: 1px #dedede solid;
     border-radius: 5px;
@@ -45,6 +46,19 @@
       }
     }
   }
+
+  &__mission-wrapper {
+    &::before {
+      content: open-quote;
+      font-size: 5rem;
+      color: $primary-campaign-color;
+    }
+    &::after {
+      content: close-quote;
+      font-size: 5rem;
+      color: $primary-campaign-color;
+    }
+  }
 }
 
 @media only screen and (max-width: 900px) {
@@ -52,11 +66,19 @@
     &__container {
       width: 95%;
       margin: 0 auto 7rem auto;
+      padding: 1rem 1.8rem;
 
       flex-direction: column;
     }
     &__logo {
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
     }
   }
+}
+
+.slick-container {
+  padding: 30px;
+  background-color: #f4cf90;
+  width: 100%;
+  overflow-x: hidden;
 }

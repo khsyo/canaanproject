@@ -4,7 +4,7 @@
   }
 
   &--container {
-    max-width: 60rem;
+    max-width: 70rem;
 
     border: 1px #dedede solid;
     border-radius: 5px;
@@ -23,7 +23,8 @@
   .job__more-description {
     &--container {
       width: 95%;
-      margin: 0 auto 7rem auto;
+      margin: 0 auto 3rem auto;
+      padding: 1rem 1.8rem;
     }
   }
 }

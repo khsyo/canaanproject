@@ -15,6 +15,7 @@
     position: relative;
 
     img {
+      height: 50%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -35,7 +36,8 @@
       top: 30%;
 
       .item {
-        color: #eb9605;
+        color: $primary-campaign-color;
+        opacity: 0.5;
         &,
         &:visited,
         &:link {
@@ -44,19 +46,23 @@
         i {
           font-size: 3rem;
         }
+        &:hover {
+          opacity: 0.9;
+        }
       }
     }
   }
+}
 
-  // &__contact {
-  //   flex-basis: 20rem;
-  //   flex-grow: 2;
-  // }
+@media only screen and (max-width: 900px) {
+  .footer {
+    margin-bottom: 4rem;
+  }
 }
 
 @media only screen and (max-width: 600px) {
   .footer {
-    margin-bottom: 10rem;
+    margin-bottom: 2rem;
 
     flex-direction: column;
 

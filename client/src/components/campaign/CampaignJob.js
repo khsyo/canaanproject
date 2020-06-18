@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { getJobById } from "../../actions/jobs";
 
+import SlideComponent from "../layout/SlideComponent";
 import Spinner from "../layout/Spinner";
 import JobEssential from "../job/JobEssential";
 import JobDescription from "../job/JobDescription";

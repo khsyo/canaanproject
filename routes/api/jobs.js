@@ -43,6 +43,7 @@ router.get("/:job_id", async (req, res) => {
       "location",
       "image",
       "website",
+      "mission",
     ]);
     if (!job) {
       return res.status(400).json({ msg: "Job not found" });
