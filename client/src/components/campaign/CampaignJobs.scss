@@ -31,7 +31,7 @@
 
       .job-wrapper {
         width: 45%;
-        margin: 0 2.5rem 2rem 0;
+        margin: 0 5rem 2rem 0;
         padding: 1rem 0.5rem;
         display: flex;
         flex-direction: row;
@@ -83,6 +83,13 @@
 
   @media only screen and (max-width: 600px) {
     &__employer-container {
+      .employer-info {
+        text-align: center;
+        h3 {
+          margin: 0 auto;
+        }
+      }
+
       .job-container {
         .job-wrapper {
           flex-direction: column;

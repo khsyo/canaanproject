@@ -29,7 +29,7 @@ html {
 body {
   font-family: LiHei Pro Medium, Microsoft JhengHei, \\65b0\7d30\660e\9ad4,
     Arial, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   letter-spacing: 2px;
   line-height: 1.4;
   color: $primary-font-color;
@@ -37,12 +37,8 @@ body {
 }
 
 .container {
-  margin-top: 7rem;
+  margin-top: 5.5rem;
   position: relative;
 
   min-height: 90vh;
-
-  @media only screen and (max-width: 600px) {
-    margin-top: 8rem;
-  }
 }

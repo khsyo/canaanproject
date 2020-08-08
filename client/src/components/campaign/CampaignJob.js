@@ -21,9 +21,12 @@ export const CampaignJob = ({ getJobById, job: { loading, job }, match }) => {
         <Fragment>
           {job ? (
             <div className="job__wrapper">
-              <JobEssential job={job} />
-              <JobDescription job={job} />
-              <JobEmployerBriefIntro job={job} />
+              <div className="blank-box" />
+              <div className="job__wrapper--container">
+                <JobEssential job={job} />
+                <JobDescription job={job} />
+                <JobEmployerBriefIntro job={job} />
+              </div>
             </div>
           ) : (
             "loading"

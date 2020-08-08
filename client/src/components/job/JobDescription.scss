@@ -4,7 +4,8 @@
   }
 
   &--container {
-    max-width: 70rem;
+    max-width: 68.3rem;
+    width: calc(100% - 28rem);
 
     border: 1px #dedede solid;
     border-radius: 5px;
@@ -16,6 +17,11 @@
   }
   &--section {
     margin-bottom: 3rem;
+
+    .title {
+      font-size: 1.7rem;
+      margin-bottom: 1rem;
+    }
   }
 }
 

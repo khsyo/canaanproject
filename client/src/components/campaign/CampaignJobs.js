@@ -14,10 +14,11 @@ const CampaignJobs = ({ getAllJobs, job: { loading, jobs } }) => {
       ) : (
         <Fragment>
           <div className="jobs__wrapper u-center-text">
-            <h2 className="jobs__title">參加企業 與 職缺</h2>
+            {/* Remove */}
+            {/* <h2 className="jobs__title">參加企業 與 職缺</h2>
             <h5 className="jobs__secondary-title">
               應徵所有有興趣的職缺以完成報名
-            </h5>
+            </h5> */}
             {jobs ? (
               Object.entries(jobs).map((job, index) => (
                 <div
@@ -34,7 +35,11 @@ const CampaignJobs = ({ getAllJobs, job: { loading, jobs } }) => {
                           <h4 className="title">{j.title}</h4>
                           <p className="salary">{j.salary}</p>
                         </div>
-                        <a href={`/job/${j._id}`} className="btn cta-btn">
+                        <a
+                          href={`/job/${j._id}`}
+                          className="btn cta-btn"
+                          target="_blank"
+                        >
                           應徵
                         </a>
                       </div>

@@ -14,7 +14,6 @@ const JobEssential = ({ job }) => {
   } = job;
   return (
     <Fragment>
-      <div className="blank-box"></div>
       <div className="job__basic-wrapper">
         <div className="job__basic-container">
           <div className="job__header">
@@ -74,7 +73,9 @@ const JobEssential = ({ job }) => {
           <div className="cta__container">
             <div id="right" className="cta__container--right">
               <button className="btn cta-btn">
-                <a href={ctaLink}>應徵</a>
+                <a href={ctaLink} target="_blank">
+                  應徵
+                </a>
               </button>
               <span>工作不等人，立即應徵！</span>
             </div>
@@ -85,7 +86,9 @@ const JobEssential = ({ job }) => {
         <div className="cta__container">
           <div className="cta__container--bottom">
             <button className="btn cta-btn">
-              <a href={ctaLink}>應徵</a>
+              <a href={ctaLink} target="_blank">
+                應徵
+              </a>
             </button>
             <span>工作不等人，立即應徵！</span>
           </div>

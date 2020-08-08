@@ -7,13 +7,23 @@
     display: flex;
     flex-direction: column;
 
-    max-width: 70rem;
+    width: calc(100% - 28rem);
 
     border: 1px #dedede solid;
     border-radius: 5px;
     margin-left: 4rem;
     margin-bottom: 7rem;
     padding: 2rem 3rem;
+    overflow-x: hidden;
+
+    &--top {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &--bottom {
+      margin-top: 3rem;
+    }
   }
 
   &__logo {
@@ -43,21 +53,19 @@
         i {
           margin-right: 0.5rem;
         }
+        a,
+        a:visited,
+        a:focus {
+          text-decoration: underline;
+          color: black;
+        }
       }
     }
   }
 
   &__mission-wrapper {
-    &::before {
-      content: open-quote;
-      font-size: 5rem;
-      color: $primary-campaign-color;
-    }
-    &::after {
-      content: close-quote;
-      font-size: 5rem;
-      color: $primary-campaign-color;
-    }
+    background-color: $primary-campaign-color-light;
+    padding: 2rem 3rem;
   }
 }
 
@@ -69,6 +77,11 @@
       padding: 1rem 1.8rem;
 
       flex-direction: column;
+
+      &--top {
+        display: flex;
+        flex-direction: column;
+      }
     }
     &__logo {
       margin-bottom: 1rem;
@@ -81,4 +94,8 @@
   background-color: #f4cf90;
   width: 100%;
   overflow-x: hidden;
+}
+
+.slick-list {
+  overflow: hidden;
 }
