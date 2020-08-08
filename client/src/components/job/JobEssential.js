@@ -85,10 +85,8 @@ const JobEssential = ({ job }) => {
       {ctaLink && (
         <div className="cta__container">
           <div className="cta__container--bottom">
-            <button className="btn cta-btn">
-              <a href={ctaLink} target="_blank">
-                應徵
-              </a>
+            <button className="btn cta-btn" href={ctaLink} target="_blank">
+              應徵
             </button>
             <span>工作不等人，立即應徵！</span>
           </div>
